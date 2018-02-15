@@ -15,6 +15,7 @@ public class RollTest {
 		for (int a = 0; a < 10000; a++) {
 			Roll r = new Roll();
 			// TODO: Make sure value of roll is between 1 and 12.
+			System.out.print(r.getScore());
 		}
 
 	}
