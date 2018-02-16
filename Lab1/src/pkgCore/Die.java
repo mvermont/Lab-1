@@ -9,7 +9,7 @@ public class Die {
 		DieValue = (byte)(Math.random()*6 + 1);			
 	}
 
-	public int getDieValue() {
+	public byte getDieValue() {
 		return DieValue;
 	}
 }

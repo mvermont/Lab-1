@@ -16,8 +16,8 @@ public class Round {
 
 		// TODO: Create a loop that will execute a roll until point is made, or
 		// seven-out
-		if(ComeOutScore != 2 || ComeOutScore != 3 || ComeOutScore != 12 || ComeOutScore != 7 || ComeOutScore != 11) {
-			while(rolls.getLast().getScore() != 7 || 
+		if(r1.isCraps() == false && r1.isNatural() == false) {
+			while(rolls.getLast().isSeven() == false || 
 					rolls.getLast().getScore() != ComeOutScore) {
 				Roll r = new Roll();
 				rolls.add(r);
@@ -25,13 +25,13 @@ public class Round {
 		}	
 
 		// TODO: value the eGameResult after the round is complete
-		if(ComeOutScore == 2 || ComeOutScore == 3 || ComeOutScore == 12) {
+		if(r1.isCraps()) {
 			eGameResult = eGameResult.CRAPS;
 		}
-		else if(ComeOutScore == 7 || ComeOutScore == 11) {
+		else if(r1.isNatural()) {
 			eGameResult = eGameResult.NATURAL;
 		}
-		else if(rolls.getLast().getScore() == 7) {
+		else if(rolls.getLast().isSeven()) {
 			eGameResult = eGameResult.SEVEN_OUT;
 		}
 		else if(rolls.getLast().getScore() == ComeOutScore) {
