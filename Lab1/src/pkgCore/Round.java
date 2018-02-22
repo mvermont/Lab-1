@@ -13,7 +13,6 @@ public class Round {
 		// TODO: Execute Come Out roll, value ComeOutScore
 		Roll r1 = new Roll();
 		ComeOutScore = r1.getScore();
-		System.out.println(ComeOutScore);
 		rolls.add(r1);
 
 		// TODO: Create a loop that will execute a roll until point is made, or
@@ -52,6 +51,7 @@ public class Round {
 	
 	public void printRolls() {
 		int count = 0;
+		System.out.println("Rolls: ");
 		while(count < RollCount()) {
 			System.out.print(rolls.get(count).getScore());
 			count++;
