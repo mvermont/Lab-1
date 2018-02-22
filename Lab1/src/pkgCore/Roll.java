@@ -4,17 +4,17 @@ public class Roll {
 
 	private Die d1;
 	private Die d2;
-	private byte Score;
+	private int Score;
 
 	public Roll() {
 		// TODO: Create an instance of d1 and d2...
 		// TODO: Determine 'Score'
 		d1 = new Die();
 		d2 = new Die();
-		Score = (byte) (d1.getDieValue() + d2.getDieValue());
+		Score = (int) (d1.getDieValue() + d2.getDieValue());
 	}
 
-	public byte getScore() {
+	public int getScore() {
 		return Score;
 	}
 	
